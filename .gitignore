@@ -2,3 +2,7 @@ node_modules
 venv
 .DS_Store
 **pycache**/
+.idea
+target
+.allure
+allure-results
