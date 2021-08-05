@@ -2,7 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Account Tests">
-    <test name="Login Tests">
+    <test name="Login Tests - Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="TestAccount"/>
+        </classes>
+    </test>
+    <test name="Login Tests - Firefox">
+        <parameter name="browser" value="firefox"></parameter>
         <classes>
             <class name="TestAccount"/>
         </classes>
