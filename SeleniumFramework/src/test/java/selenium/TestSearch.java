@@ -1,16 +1,22 @@
 package selenium;
-
 import PageObjects.BaseClass;
 import PageObjects.SearchResultsPage;
 import dataProviders.SearchProvider;
+import io.qameta.allure.Attachment;
 import org.openqa.selenium.*;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pojo.SearchData;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import static org.apache.commons.io.FileUtils.readFileToByteArray;
 
 public class TestSearch extends BaseClass {
+    SearchData testData;
 
     @Test
     @Parameters({"searchCriteria", "expectedResult"})
@@ -50,8 +56,9 @@ public class TestSearch extends BaseClass {
         return driver.findElements(By.cssSelector(".product-thumb")).size();
     }
 
-    @Test (dataProvider = "getSearchDataFromJson", dataProviderClass = SearchProvider.class)
+    @Test (dataProvider = "getSearchDataFromPSQLDB", dataProviderClass = SearchProvider.class)
     public void Test_Search_WithData(SearchData testData){
+        this.testData = testData;
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
         WebElement searchInput = driver.findElement(By.name("search"));
         searchInput.sendKeys(testData.getSearchCriteria());
@@ -66,18 +73,29 @@ public class TestSearch extends BaseClass {
         }
     }
 
-    /*
-    @Attachment(value = "TestData", type = "text/plain", fileExtension = ".txt")
-    public byte[] PrintTestData(){
+    @AfterMethod
+    public void AfterMethod() {
         try {
-            //File file = new File();
-            //file.
-            //return "Search Criteria used: " + tesData[0] + ", Expected results: " + tesData[1];
+            PrintTestData();
+        }catch (IOException ex){
+            System.out.println(ex.getMessage());
+        }
+        super.AfterMethod();
+    }
+
+    @Attachment(value = "TestData", type = "text/plain", fileExtension = ".txt")
+    public byte[] PrintTestData() throws IOException {
+        File file = new File("src/main/resources/results.txt");
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write("Search Criteria: " + testData.getSearchCriteria() + ", Expected Results: " + this.testData.getExpectedResults());
+            fileWriter.close();
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());
         }
-    }*/
+        return readFileToByteArray(file);
+    }
 
     /**
      * String = "Juan"
