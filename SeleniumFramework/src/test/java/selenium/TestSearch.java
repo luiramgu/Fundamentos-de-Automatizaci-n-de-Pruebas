@@ -65,29 +65,4 @@ public class TestSearch extends BaseClass {
             Assert.assertTrue(searchResultsPage.isNoResultsVisible());
         }
     }
-
-    /*
-    @Attachment(value = "TestData", type = "text/plain", fileExtension = ".txt")
-    public byte[] PrintTestData(){
-        try {
-            //File file = new File();
-            //file.
-            //return "Search Criteria used: " + tesData[0] + ", Expected results: " + tesData[1];
-        }
-        catch (Exception ex){
-            System.out.println(ex.getMessage());
-        }
-    }*/
-
-    /**
-     * String = "Juan"
-     *
-     * String[] = ["Juan", "Pablo", "Piedra"]
-     *
-     *
-     * String[][]
-     * Nombre Apellido Correo
-     * Juaun    Piedra  juan@piedra
-     *
-     * */
 }

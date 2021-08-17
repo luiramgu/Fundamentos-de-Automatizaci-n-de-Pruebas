@@ -17,9 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class BaseClass {
-    protected WebDriver driver;
-
+public class BaseClass extends PageObjectHandler {
     @Parameters({"browser"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String browser) throws MalformedURLException, InterruptedException {
