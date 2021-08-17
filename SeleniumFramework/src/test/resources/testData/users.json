@@ -1,0 +1,14 @@
+{
+  "dataSet": [
+    {
+      "email" : "juan.piedra@ucreativa.com",
+      "password" : "asdf",
+      "validAccount": true
+    },
+    {
+      "email" : "juan.piedra@ucreativa.com",
+      "password" : "as",
+      "validAccount": false
+    }
+  ]
+}
