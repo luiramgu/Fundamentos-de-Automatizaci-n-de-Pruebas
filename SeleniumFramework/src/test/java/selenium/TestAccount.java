@@ -2,6 +2,7 @@ package selenium;
 
 import PageObjects.BaseClass;
 import PageObjects.LoginPage;
+import PageObjects.Utils;
 import dataProviders.SearchProvider;
 import dataProviders.UsersProvider;
 import io.qameta.allure.Description;
@@ -74,17 +75,23 @@ public class TestAccount extends BaseClass {
         //SETUP
         String firstName = "Juan";
         String lastName = "Piedra";
-        String email = "juan@piedra.com";
+        String email = Utils.generateRandomEmail();
         String telephone = "11111";
         String password = "asdf";
         String expectedMessage = "Your Account Has Been Created!";
 
         //RUN
+
         registerPage().GoTo();
         registerPage().FillForm(firstName, lastName, email, telephone, password);
 
         //VALIDATION
         Assert.assertEquals(registerPage().GetConfirmationMessage(), expectedMessage);
+    }
+
+    @Test
+    public void Test_Duplicated_Email(){
+
     }
 
 

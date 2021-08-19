@@ -1,4 +1,5 @@
-package PageObjects;
+package selenium;
+import PageObjects.*;
 import org.openqa.selenium.WebDriver;
 
 public class PageObjectHandler {
@@ -9,6 +10,9 @@ public class PageObjectHandler {
     private LoginPage loginPage;
     private RegisterPage registerPage;
     private SearchResultsPage searchResultsPage;
+    private HomePage homePage;
+    private ProductPage productPage;
+    private ShoppingCartPage shoppingCartPage;
 
     public PageObjectHandler(){}
 
@@ -31,5 +35,20 @@ public class PageObjectHandler {
         if(this.searchResultsPage == null)
             searchResultsPage = new SearchResultsPage(driver);
         return searchResultsPage;
+    }
+    public HomePage homePage(){
+        if(this.homePage == null)
+            homePage = new HomePage(driver);
+        return homePage;
+    }
+    public ShoppingCartPage shoppingCartPage(){
+        if(this.shoppingCartPage == null)
+            shoppingCartPage = new ShoppingCartPage(driver);
+        return shoppingCartPage;
+    }
+    public ProductPage productPage(){
+        if(this.productPage == null)
+            productPage = new ProductPage(driver);
+        return productPage;
     }
 }
