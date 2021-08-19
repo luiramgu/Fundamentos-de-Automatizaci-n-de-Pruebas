@@ -3,8 +3,7 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class RegisterPage extends BasePage{
-    private WebDriver driver;
+public class RegisterPage extends BasePage {
 
     //Elementos
     private By NameLocator = By.name("firstname");
