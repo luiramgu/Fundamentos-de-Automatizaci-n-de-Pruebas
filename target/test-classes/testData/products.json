@@ -1,0 +1,11 @@
+{
+  "dataSet": [
+    {
+      "product" : "macbook",
+      "imageURL" : "macbook_1-47x47.jpg",
+      "dolarsPrice": 602.00,
+      "poundsPrice" : 454.10,
+      "euroPrice": 518.16
+    }
+  ]
+}

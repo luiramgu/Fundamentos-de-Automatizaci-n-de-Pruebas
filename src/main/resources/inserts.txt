@@ -1,0 +1,35 @@
+INSERT INTO public.users(
+	email, password)
+	VALUES ('juan.piedra@ucreativa.com', 'asdf');
+
+INSERT INTO public.users(
+	email, password)
+	VALUES ('anakin.skywalker@ucreativa.com', 'asdf');
+
+INSERT INTO public.users(
+	email, password)
+	VALUES ('ahsoka.tano@ucreativa.com', 'asdf');
+
+INSERT INTO public.searchCriterias(
+	searchCriteria, expectedResults)
+	VALUES ('macbook', 3);
+INSERT INTO public.searchCriterias(
+	searchCriteria, expectedResults)
+	VALUES ('iphone', 1);
+INSERT INTO public.searchCriterias(
+	searchCriteria, expectedResults)
+	VALUES ('Star Wars', 0);
+
+
+/*
+CREATE TABLE users (
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE searchCriterias (
+	searchCriteria VARCHAR(255) NOT NULL,
+	expectedResults int NOT NULL
+);
+
+*/

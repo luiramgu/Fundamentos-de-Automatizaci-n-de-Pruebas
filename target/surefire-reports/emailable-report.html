@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Proyecto_Final_Tests test</th></tr>
+<tr><td><a href="#t0">Registro Nuevos Clientes - Chrome</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">154,013</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Proyecto_Final_Tests test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Registro Nuevos Clientes - Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">selenium.TestAccount</td><td><a href="#m0">Test_Login_Unsuccessful</a></td><td rowspan="1">1629740302564</td><td rowspan="1">34</td></tr><tr><th colspan="4">Registro Nuevos Clientes - Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">selenium.TestAccount</td><td><a href="#m1">Test_CanCreateNewAccounts</a></td><td rowspan="3">1629740219370</td><td rowspan="3">7693</td></tr><tr class="passedeven"><td><a href="#m2">Test_CanCreateNewAccounts</a></td></tr><tr class="passedeven"><td><a href="#m3">Test_CanCreateNewAccounts</a></td></tr><tr class="passedeven"><td><a href="#m4">Test_Create_New_Account</a></td><td rowspan="1">1629740234914</td><td rowspan="1">4163</td></tr><tr class="passedeven"><td><a href="#m5">Test_Login_Successful</a></td><td rowspan="1">1629740267003</td><td rowspan="1">5955</td></tr><tr class="passedeven"><td><a href="#m6">Test_Login_With_Data</a></td><td rowspan="2">1629740338554</td><td rowspan="2">4134</td></tr><tr class="passedeven"><td><a href="#m7">Test_Login_With_Data</a></td></tr></tbody>
+</table>
+<h2>Registro Nuevos Clientes - Chrome</h2><h3 id="m0">selenium.TestAccount#Test_Login_Unsuccessful</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-6FBL8RKQ&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_301&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at PageObjects.HeaderPage.clickOnMyAccount(HeaderPage.java:40)
+	at PageObjects.LoginPage.GoTo(LoginPage.java:35)
+	at selenium.TestAccount.Test_Login_Unsuccessful(TestAccount.java:58)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">selenium.TestAccount#Test_CanCreateNewAccounts</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>pojo.Email@1eb85a47</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">selenium.TestAccount#Test_CanCreateNewAccounts</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>pojo.Email@4d518c66</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">selenium.TestAccount#Test_CanCreateNewAccounts</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>pojo.Email@24c685e7</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">selenium.TestAccount#Test_Create_New_Account</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">selenium.TestAccount#Test_Login_Successful</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">selenium.TestAccount#Test_Login_With_Data</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>pojo.UserAccount@55638165</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">selenium.TestAccount#Test_Login_With_Data</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>pojo.UserAccount@7f6b57f2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

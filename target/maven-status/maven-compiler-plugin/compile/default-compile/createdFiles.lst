@@ -1,0 +1,14 @@
+PageObjects\Utils.class
+Selectors\HomePageLocators.class
+pojo\Products.class
+pojo\Email.class
+PageObjects\RegisterPage.class
+PageObjects\BasePage.class
+PageObjects\ShoppingCartPage.class
+PageObjects\ProductPage.class
+PageObjects\HomePage.class
+pojo\UserAccount.class
+PageObjects\HeaderPage.class
+PageObjects\LoginPage.class
+pojo\SearchData.class
+PageObjects\SearchResultsPage.class

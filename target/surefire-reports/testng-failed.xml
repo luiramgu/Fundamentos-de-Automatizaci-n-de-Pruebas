@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Proyecto_Final_Tests test]">
+  <test thread-count="5" verbose="0" name="Registro Nuevos Clientes - Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="selenium.TestAccount">
+        <methods>
+          <include name="AfterMethod"/>
+          <include name="Test_Login_Unsuccessful"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- selenium.TestAccount -->
+    </classes>
+  </test> <!-- Registro Nuevos Clientes - Chrome(failed) -->
+</suite> <!-- Failed suite [Proyecto_Final_Tests test] -->
