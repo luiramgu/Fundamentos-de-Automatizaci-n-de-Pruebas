@@ -108,8 +108,7 @@ public class TestAccount extends BaseClass {
         //Llenamos la informacion del registro
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.FillForm("TestAccount","TestAccount",email.getEmail(),
-                "111111111", e
-                mail.getPassword());
+                "111111111", email.getPassword());
         String confirmationMessage= registerPage.GetConfirmationMessage();
         Assert.assertTrue(confirmationMessage.contains(expectedMessage) );
 
